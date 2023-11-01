@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Lead Data</title>
+</head>
+<body>
+    <h1>Salesforce Lead Data</h1>
+    <p>Total Hot Leads: {{ hot_lead_count }}</p>
+    <p>Total Records: {{ total_records }}</p>
+    <table border="1">
+        <thead>
+            <form action="/lead" method="GET" ></form>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Title</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Country</th>
+                <th>Company</th>
+                <th>Industry</th>
+                <th>Status</th>
+                <th>AnnualRevenue</th>
+                <th>NumberofEmployees</th>
+                <th>Revenue Range</th>
+                <th>Technology</th>
+                <th>Technology Service</th>
+                <th>Exists</th>
+                <th>Lead Score</th> 
+                <th>Lead Score Final</th>
+                <th>Lead Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for lead in lead_data %}
+            <tr>
+                <td>{{ lead.FirstName }}</td>
+                <td>{{ lead.LastName }}</td>
+                <td>{{ lead.Title }}</td>
+                <td>{{ lead.Email }}</td>
+                <td>{{ lead.Phone }}</td>
+                <td>{{ lead.Country__c }}</td>
+                <td>{{ lead.Company }}</td>
+                <td>{{ lead.Industry }}</td>
+                <td>{{ lead.Status }}</td>
+                <td>{{ lead.AnnualRevenue }}</td>
+                <td>{{ lead.NumberOfEmployees }}</td>
+                <td>{{ lead.RevenueRange }}</td>
+                <td>{{ lead.Technology__c }}</td>
+                <td>{{ lead.Technology_Service__c }}</td>
+                <td>{{ lead.Exists }}</td>
+                <td>{{ lead.LeadScore }}</td> 
+                <td>{{ lead.LeadScoreFinal }}</td>
+                <td>{{ lead.LeadCategory }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

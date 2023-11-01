@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Results</title>
+</head>
+<body>
+    <h1>Results for User Input:</h1>
+    <p><strong>Title:</strong> {{ user_input['Title'] }}</p>
+    <p><strong>Country:</strong> {{ user_input['Country__c'] }}</p>
+    <p><strong>Industry:</strong> {{ user_input['Industry'] }}</p>
+    <p><strong>Revenue Range:</strong> {{ user_input['RevenueRange'] }}</p>
+    <p><strong>Technology:</strong> {{ user_input['Technology__c'] }}</p>
+    <p><strong>Technology Services:</strong> {{ user_input['Technology_Service__c'] }}</p>
+
+    <h2>Top 10 Hot Leads:</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Title</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Country</th>
+                <th>Company</th>
+                <th>Industry</th>
+                <th>AnnualRevenue</th>
+                <th>NumberOfEmployees</th>
+                <th>Technology</th>
+                <th>TechnologyServices</th>
+                <th>RevenueRange</th>
+                <th>LeadScoreFinal</th>
+                <th>LeadCategory</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for lead in recommended_hot_leads %}
+                <tr>
+                    <td>{{ lead['FirstName'] }}</td>
+                    <td>{{ lead['LastName'] }}</td>
+                    <td>{{ lead['Title'] }}</td>
+                    <td>{{ lead['Email'] }}</td>
+                    <td>{{ lead['Phone'] }}</td>
+                    <td>{{ lead['Country__c'] }}</td>
+                    <td>{{ lead['Company'] }}</td>
+                    <td>{{ lead['Industry'] }}</td>
+                    <td>{{ lead['AnnualRevenue'] }}</td>
+                    <td>{{ lead['NumberOfEmployees'] }}</td>
+                    <td>{{ lead['Technology__c'] }}</td>
+                    <td>{{ lead['Technology_Service__c'] }}</td>
+                    <td>{{ lead['RevenueRange'] }}</td>
+                    <td>{{ lead['LeadScoreFinal'] }}</td>
+                    <td>{{ lead['LeadCategory'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,13 @@
+Unique Titles: {'Product Manager', 'Data Analyst', 'SVP, Technology', 'Marketing Coordinator', 'Marketing Manager', 'Marketing Director', 'Consultant', 'IT Manager', 'VP, Facilities', 'VP, Production', 'VP, Finance', 'Director of Vendor Relations', 'SVP, Operations', 'VP, Administration', 'Production Manager', 'CEO', 'Sales Manager', 'Financial Analyst', 'Production Supervisor', 'Healthcare Director', 'VP, Technology', 'CTO', 'SVP, Procurement', 'Business Consultant', 'Data Scientist', 'Account Executive', 'SVP, Administration and Finance', 'SVP, Production', 'Senior VP', 'Regional General Manager', 'Finance Manager', 'Healthcare Coordinator', 'Finance Director', 'CFO', 'Healthcare Manager'}  
+
+Unique Countries: {'IN', 'USA'}
+
+Unique Industries: {'Consulting', 'Banking', 'Entertainment', 'Engineering', 'Food & Beverage', 'Recreation', 'Hospitality', 'Telecommunications', 'Insurance', 'Machinery', 'Apparel', 'Healthcare', 'Government', 'Not For Profit', 'Transportation', 'Media', 'Other', 'Environmental', 'Construction', 'Energy', 'Manufacturing', 'Technology', 'Biotechnology', 'Retail', 'Chemicals', 'Electronics', 'Utilities', 'Finance', 'Education', 'Shipping', 'Communications'}    
+   
+Unique Statuses: {'Unqualified', 'Qualified', 'Open', 'Contacted'}
+
+Unique Revenue Range: {'4M - 6M', '0 - 500k', '2M - 4M', '500k - 2M'}
+
+Unique Technologies: {'Marketing', 'Financial', 'AI', 'IT Services', 'Manufacturing', 'Healthcare', 'CRM', 'RPA', 'SAP'}
+
+Unique Technology Services: {'Healthcare Data Management', 'Auditing and Assurance', 'Marketing Automation', 'RPA Consulting and Strategy', 'CRM Integration and Customization', 'SAP Implementation and Consulting', 'AI Chatbots and Virtual Assistants', 'Process Optimization and Automation', 'CRM Software Implementation', 'IT Infrastructure Management', 'Process Analysis and Optimization', 'Financial Planning and Analysis', 'Supply Chain Management', 'Healthcare Compliance and Regulations', 'SAP Customization and Development', 'Digital Marketing', 'IT Consulting and Strategy'}

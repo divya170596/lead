@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hot Leads Results</title>
+</head>
+<body>
+    <h1>Hot Leads Results</h1>
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>Country</th>
+            <th>Industry</th>
+            <th>Revenue Range</th>
+            <th>Technology</th>
+            <th>Technology Service</th>
+        </tr>
+        {% for index, lead in top_leads.iterrows() %}
+        <tr>
+            <td>{{ lead['Title'] }}</td>
+            <td>{{ lead['Country__c'] }}</td>
+            <td>{{ lead['Industry'] }}</td>
+            <td>{{ lead['RevenueRange'] }}</td>
+            <td>{{ lead['Technology__c'] }}</td>
+            <td>{{ lead['Technology_Service__c'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

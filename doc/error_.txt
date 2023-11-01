@@ -1,0 +1,11 @@
+
+Unique Statuses: {'Open', 'Contacted', 'CurrentRow.Item(4).ToString', 'Qualified', 'Unqualified'}
+'CurrentRow.Item(4).ToString' is present in the 'Status' column in the following records:
+
+Record at index 315: OrderedDict([('attributes', OrderedDict([('type', 'Lead'), ('url', '/services/data/v57.0/sobjects/Lead/00Q76000004kvWcEAI')])), ('FirstName', 'Sarah'), ('LastName', 'Wilson'), ('Title', 'CEO'), ('Email', 'sarah.wilson@example.com'), ('Phone', '(789) 456-1230'), ('Country__c', 'IN'), ('Company', 'Global Solutions'), ('Industry', 'Government'), ('Status', 'CurrentRow.Item(4).ToString'), ('AnnualRevenue', 4567883.0), ('Technology__c', 'Healthcare'), ('Technology_Service__c', 'Healthcare Data Management')])
+
+Record at index 321: OrderedDict([('attributes', OrderedDict([('type', 'Lead'), ('url', '/services/data/v57.0/sobjects/Lead/00Q76000004kvW2EAI')])), ('FirstName', 'John'), ('LastName', 'Smith'), ('Title', 'Marketing Director'), ('Emaiith@example.com'), ('Phone', '(123) 456-7890'), ('Country__c', 'USA'), ('Company', 'ABC Company'), ('Industry', 'Communications'), ('Status', 'CurrentRow.Item(4).ToString'), ('AnnualRevenue', 4567919.0), ('Technology__c', 'CRM'), ('Technology_Service__c', 'CRM Integration and Customization')])
+
+Record at index 322: OrderedDict([('attributes', OrderedDict([('type', 'Lead'), ('url', '/services/data/v57.0/sobjects/Lead/00Q76000004kvWNEAY')])), ('FirstName', 'John'), ('LastName', 'Smith'), ('Title', 'Marketing Director'), ('Email', 'john.smith@example.com'), ('Phone', '(123) 456-7890'), ('Country__c', 'USA'), ('Company', 'ABC Company'), ('Industry', 'Construction'), ('Status', 'CurrentRow.Item(4).ToString'), ('AnnualRevenue', 4567920.0), ('Technology__c', 'CRM'), ('Technology_Service__c', 'CRM Integration and Customization')])
+
+Record at index 484: OrderedDict([('attributes', OrderedDict([('type', 'Lead'), ('url', '/services/data/v57.0/sobjects/Lead/00Q76000004kvWDEAY')])), ('FirstName', 'Sarah'), ('LastName', 'Wilson'), ('Title', 'Sales Manager'), ('Email', 'sarah.wilson@example.com'), ('Phone', '(789) 456-1230'), ('Country__c', 'IN'), ('Company', 'Global Solutions'), ('Industry', 'Hospitality'), ('Status', 'CurrentRow.Item(4).ToString'), ('AnnualRevenue', 4568265.0), ('Technology__c', 'Marketing'), ('Technology_Service__c', 'Digital Marketing')])

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Lead Data</title>
+</head>
+<body>
+    <h1>Salesforce Lead Data</h1>
+    <p>Total Hot Leads: {{ hot_lead_count }}</p>
+    <p>Total Records: {{ total_records }}</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Title</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Country</th>
+                <th>Company</th>
+                <th>Industry</th>
+                <th>Status</th>
+                <th>AnnualRevenue</th>
+                <th>NumberofEmployees</th>
+                <th>Revenue Range</th>
+                <th>Technology</th>
+                <th>Technology Service</th>
+                <th>Exists</th>
+                <th>Lead Score</th> 
+                <th>Lead Score Final</th>
+                <th>Lead Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for lead in lead_data %}
+            <tr>
+                <td>{{ lead.FirstName }}</td>
+                <td>{{ lead.LastName }}</td>
+                <td>{{ lead.Title }}</td>
+                <td>{{ lead.Email }}</td>
+                <td>{{ lead.Phone }}</td>
+                <td>{{ lead.Country__c }}</td>
+                <td>{{ lead.Company }}</td>
+                <td>{{ lead.Industry }}</td>
+                <td>{{ lead.Status }}</td>
+                <td>{{ lead.AnnualRevenue }}</td>
+                <td>{{ lead.NumberOfEmployees }}</td>
+                <td>{{ lead.RevenueRange }}</td>
+                <td>{{ lead.Technology__c }}</td>
+                <td>{{ lead.Technology_Service__c }}</td>
+                <td>{{ lead.Exists }}</td>
+                <td>{{ lead.LeadScore }}</td> 
+                <td>{{ lead.LeadScoreFinal }}</td>
+                <td>{{ lead.LeadCategory }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table> 
+    <form action="/" method="POST" >
+        <label for="Title">Title:</label>
+       
+        
+            <select id="Title" name="Title" required>
+                <option value="" disabled selected>Select Title</option>
+                <option value="Consultant">Consultant</option>
+                <option value="Sales Manager">Sales Manager</option>
+                <option value="CEO">CEO</option>
+                <option value="VP, Administration">VP, Administration</option>
+                <option value="SVP, Technology">SVP, Technology</option>
+                <option value="Regional General Manager">Regional General Manager</option>
+                <option value="Marketing Manager">Marketing Manager</option>
+                <option value="VP, Technology">VP, Technology</option>
+                <option value="Financial Analyst">Financial Analyst</option>
+                <option value="SVP, Production">SVP, Production</option>
+                <option value="Account Executive">Account Executive</option>
+                <option value="CFO">CFO</option>
+                <option value="IT Manager">IT Manager</option>
+                <option value="Finance Manager">Finance Manager</option>
+                <option value="VP, Facilities">VP, Facilities</option>
+                <option value="Senior VP">Senior VP</option>
+                <option value="VP, Finance">VP, Finance</option>
+                <option value="Healthcare Coordinator">Healthcare Coordinator</option>
+                <option value="Healthcare Manager">Healthcare Manager</option>
+                <option value="CTO">CTO</option>
+                <option value="Business Consultant">Business Consultant</option>
+                <option value="Marketing Coordinator">Marketing Coordinator</option>
+                <option value="SVP, Administration and Finance">SVP, Administration and Finance</option>
+                <option value="Data Analyst">Data Analyst</option>
+                <option value="Director of Vendor Relations">Director of Vendor Relations</option>
+                <option value="SVP, Procurement">SVP, Procurement</option>
+                <option value="Production Supervisor">Production Supervisor</option>
+                <option value="Production Manager">Production Manager</option>
+                <option value="Finance Director">Finance Director</option>
+                <option value="Data Scientist">Data Scientist</option>
+                <option value="VP, Production">VP, Production</option>
+                <option value="Healthcare Director">Healthcare Director</option>
+                <option value="Product Manager">Product Manager</option>
+                <option value="SVP, Operations">SVP, Operations</option>
+                <option value="Marketing Director">Marketing Director</option>
+            </select><br><br>
+
+        <label for="Country">Country:</label>
+        <select id="Country" name="Country" required>
+                <option value="" disabled selected>Select Country</option>
+                <option value="USA">USA</option>
+                <option value="IN">IN</option>
+            </select><br><br>
+
+        <label for="Industry">Industry:</label>
+        <select id="Industry" name="Industry" required>
+                <option value="" disabled selected>Select Industry</option>
+                <option value="Hospitality">Hospitality</option>
+                <option value="Finance">Finance</option>
+                <option value="Energy">Energy</option>
+                <option value="Machinery">Machinery</option>
+                <option value="Banking">Banking</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Communications">Communications</option>
+                <option value="Shipping">Shipping</option>
+                <option value="Consulting">Consulting</option>
+                <option value="Apparel">Apparel</option>
+                <option value="Recreation">Recreation</option>
+                <option value="Not For Profit">Not For Profit</option>
+                <option value="Food & Beverage">Food & Beverage</option>
+                <option value="Insurance">Insurance</option>
+                <option value="Biotechnology">Biotechnology</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Education">Education</option>
+                <option value="Media">Media</option>
+                <option value="Environmental">Environmental</option>
+                <option value="Other">Other</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Telecommunications">Telecommunications</option>
+                <option value="Retail">Retail</option>
+                <option value="Construction">Construction</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Government">Government</option>
+                <option value="Chemicals">Chemicals</option>
+                <option value="Technology">Technology</option>
+            </select><br><br>
+
+        <label for="RevenueRange">Revenue_Range:</label>
+        <select id="RevenueRange" name="RevenueRange" required>
+            <option value="" disabled selected>Select Revenue_Range</option>
+            <option value="0 - 500k">0 - 500k</option>
+            <option value="500k - 2M">500k - 1M</option>
+            <option value="2M - 4M">1M - 2M</option>
+            <option value="4M - 6M">2M - 3M</option>
+        </select><br><br>
+
+        <label for="Technology__c">Technologies:</label>
+        <select id="Technology__c" name="Technology__c" required>
+            <option value="" disabled selected>Select Technology</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Financial">Financial</option>
+            <option value="AI">AI</option>
+            <option value="IT Services">IT Services</option>
+            <option value="Manufacturing">Manufacturing</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="CRM">CRM</option>
+            <option value="RPA">RPA</option>
+            <option value="SAP">SAP</option>
+        </select><br><br>
+
+        
+        <label for="TechnologyServices">Technology Services:</label>
+        <select id="TechnologyServices" name="TechnologyServices" required>
+            <option value="" disabled selected>Select Technology Services</option>
+        </select><br><br>
+
+        <!-- JavaScript code for populating Technology Services dropdown -->
+        <script>
+            document.getElementById("Technology__c").addEventListener("change", updateTechnologyServices);
+
+            function updateTechnologyServices() {
+                const technologyDropdown = document.getElementById("Technology__c");
+                const technologyServicesDropdown = document.getElementById("TechnologyServices");
+
+                // Clear existing options in the Technology Services dropdown
+                technologyServicesDropdown.innerHTML = '<option value="" disabled selected>Select Technology Services</option';
+
+                const selectedTechnology = technologyDropdown.value;
+
+                // Define the options for Technology Services based on the selected Technology
+                const technologyServices = {
+                    'AI': [
+                        'AI Chatbots and Virtual Assistants',
+                        'AI Data Analytics',
+                        'AI Machine Learning'
+                    ],
+                    'RPA': [
+                        'Process Analysis and Optimization',
+                        'RPA Consulting and Strategy',
+                        'RPA Automation'
+                    ],
+                    'SAP': [
+                        'SAP Customization and Development',
+                        'SAP Implementation and Consulting',
+                        'SAP Support'
+                    ],
+                    'CRM': [
+                        'CRM Software Implementation',
+                        'CRM Integration and Customization',
+                        'CRM Customer Support'
+                    ],
+                    // Add more options for other technologies
+                };
+
+                // Populate the Technology Services dropdown based on the selected Technology
+                if (selectedTechnology in technologyServices) {
+                    technologyServices[selectedTechnology].forEach(service => {
+                        const option = document.createElement("option");
+                        option.value = service;
+                        option.textContent = service;
+                        technologyServicesDropdown.appendChild(option);
+                    });
+                }
+            }
+
+            // Initialize the Technology Services dropdown
+            updateTechnologyServices();
+        </script>
+
+        <input type="submit" value="Submit">
+    </form> 
+</body>
+</html>

@@ -1,0 +1,6 @@
+simple-salesforce
+pandas
+scikit-learn
+pandas
+flask
+Flask-Cors
